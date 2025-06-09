@@ -56,7 +56,7 @@ exports.createShortUrl = async (req, res) => {
 
     res.status(201).json({
       success: true,
-      shortUrl: `http://localhost:3000/${customId}`,
+      shortUrl: `${process.env.BASE_URL}/${customId}`,
       originalUrl: url,
     });
   } catch (error) {
